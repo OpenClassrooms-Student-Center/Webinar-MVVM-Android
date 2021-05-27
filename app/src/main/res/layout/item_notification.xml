@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_notifications_active_24"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@id/expeditor"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp"
+        android:contentDescription="@string/title_notifications" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/vous_avez_re_u_1_nouveau_mail" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:text="@string/de"
+        android:paddingEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/expeditor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@id/text"
+        app:layout_constraintTop_toTopOf="@id/text"
+        app:layout_constraintBottom_toBottomOf="@id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="toto@gegemail.com" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
